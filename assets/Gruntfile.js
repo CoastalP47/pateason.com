@@ -4,13 +4,17 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat:{
       options:{
-        separator:';',
+        separator:';\n',
         stripBanners: true,
         banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - created: <%= grunt.template.today("mm-dd-yyyy") %> */ \n'
       },
-      dist: {
-        src: ['js/components/**/*.js'],
+      components: {
+        src: ['js/components/functions/**/*.js', 'js/components/base.js'],
         dest: 'js/<%= pkg.name %>.js'
+      },
+      libs: {
+        src: ['js/lib/*.js'],
+        dest: 'js/<%= pkg.name %>_lib.js'
       }
     },
     less:{
@@ -28,6 +32,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
 
-  grunt.registerTask('default', ['concat', 'less:development']);
+  grunt.registerTask('default', ['concat:components', 'concat:libs', 'less:development']);
 
 };
