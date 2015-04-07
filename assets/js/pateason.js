@@ -1,4 +1,18 @@
-/*! pateason - v0.1.0 - created: 04-05-2015 */ 
+/*! pateason - v0.1.0 - created: 04-06-2015 */ 
+Masonry = {
+  init: function(){
+    this.buildPosts();
+  },
+  buildPosts: function(){
+    var $container = $('#posts > .row');
+    console.log($container);
+    // initialize
+    $container.masonry({
+      itemSelector: '.post-entry'
+    });
+  }
+}
+;
 NavBar = {
   init: function(){
     this.events();
@@ -13,9 +27,30 @@ NavBar = {
   }
 }
 ;
+ScrollSpy = {
+  init: function(){
+    this.events();
+  },
+  events: function(){
+    $(document).scroll(function(e){
+      var curPos = $(document).scrollTop();
+      var heroPos = $('header').innerHeight();
+      if(curPos > heroPos){
+        $('#stickyHeader').addClass('active');
+        $('.menu-icon').addClass('sticky');
+      }else{
+        $('#stickyHeader').removeClass('active');
+        $('.menu-icon').removeClass('sticky');
+      }
+    });
+  }
+}
+;
 ScriptLoad = {
     init: function () {
         NavBar.init();
+        Masonry.init();
+        ScrollSpy.init();
     }
 };
 

@@ -30,11 +30,26 @@
     font-size:.9em;
   }
   .post-meta{
+    a.label{
+      border:1px solid #fff;
+      .transition(150ms all);
+      &:hover{
+        color:@primaryColor;
+        border:1px solid @primaryColor;
+        background:#fff;
+      }
+    }
     .post-tags{
 
     }
     .post-category{
 
+    }
+    .post-comments{
+      small{
+        font-size:0.6875rem;
+        border:1px solid #fff;
+      }
     }
   }
 }
@@ -50,6 +65,35 @@
 }
 
 @keyframes postFadeInIntro{
+  0%{
+    opacity:0;
+    .transform(translateY(30px));
+  }
+  45%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+  55%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+  100%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+
+}
+
+@-webkit-keyframes postFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes postFadeInIntro{
   0%{
     opacity:0;
     .transform(translateY(30px));

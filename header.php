@@ -8,7 +8,7 @@
   </head>
   <body <?php body_class();?>>
     <?php echo get_template_part('partials/nav', 'cover'); ?>
-
+    <?php echo get_template_part('partials/header', 'sticky'); ?>
     <header>
       <div class="row">
         <div class="column small-12 medium-5 hero-img">
