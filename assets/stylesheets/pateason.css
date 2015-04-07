@@ -10612,7 +10612,7 @@ body {
 .menu-icon {
   height: 32px;
   width: 40px;
-  top: 10px;
+  top: 18px;
   right: 10px;
   z-index: 1001;
 }
@@ -10832,6 +10832,11 @@ header .hero-tag h4 {
     -moz-transform: translateY(0px) !important;
     -ms-transform: translateY(0px) !important;
     -o-transform: translateY(0px) !important;
+    position: relative !important;
+    float: left !important;
+    width: 100% !important;
+    top: auto !important;
+    left: auto !important;
   }
 }
 .post-entry .post-gutter {

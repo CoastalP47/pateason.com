@@ -2,11 +2,17 @@
 Masonry = {
   init: function(){
     this.buildPosts();
+    this.events();
+  },
+  events: function(){
+    var helper = this;
+    $(window).resize(function(){
+      var $container = $('#posts > .row');
+      $container.masonry('bindResize');
+    });
   },
   buildPosts: function(){
     var $container = $('#posts > .row');
-    console.log($container);
-    // initialize
     $container.masonry({
       itemSelector: '.post-entry'
     });
