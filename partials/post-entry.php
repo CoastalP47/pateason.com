@@ -1,6 +1,10 @@
-<div class="column small-12 medium-6 large-4 post-entry <?php echo $class; ?>">
+<article class="column small-12 medium-6 large-4 post-entry <?php echo $class; ?>">
   <div class="post-gutter">
     <h4 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+    <div class="post-date">
+      <i class="fa fa-calendar-o"></i>
+      <small><?php the_time(get_option('date_format')); ?></small>
+    </div>
     <hr>
     <span class="post-excerpt"><?php the_excerpt(); ?></span>
     <hr>
@@ -34,4 +38,4 @@
       </div>
     </div>
   </div>
-</div>
+</article>

@@ -1,14 +1,12 @@
 header{
   background:url('../img/bg.jpg') center top no-repeat;
   background-size:cover;
-  padding:150px 0;
+  padding:60px 0;
   @media screen and (max-width:621px){
     text-align:center;
     padding:60px 0;
   }
-  .row{
-    .animation(headerFadeIn 1s);
-  }
+
   .hero-img{
     @media screen and (min-width:642px){
       text-align:right;
@@ -32,6 +30,15 @@ header{
     h4{
       font-family:@primaryFont;
       margin:0;
+    }
+  }
+}
+
+body.home{
+  header{
+    padding:150px 0;
+    .row{
+      .animation(headerFadeIn 1s);
     }
   }
 }

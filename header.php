@@ -11,12 +11,14 @@
     <?php echo get_template_part('partials/header', 'sticky'); ?>
     <header>
       <div class="row">
-        <div class="column small-12 medium-5 hero-img">
-          <?php echo get_avatar(get_option('admin_email'), 160, '', 'Pat Eason\'s ugly mug'); ?>
-        </div>
-        <div class="column small-12 medium-7 hero-tag">
-          <h1>Pat Eason</h1>
-          <h4>Frontend Developer</h4>
-        </div>
+        <a href="<?php echo site_url(); ?>">
+          <div class="column small-12 medium-5 hero-img">
+            <?php echo get_avatar(get_option('admin_email'), 160, '', 'Pat Eason\'s ugly mug'); ?>
+          </div>
+          <div class="column small-12 medium-7 hero-tag">
+            <h1>Pat Eason</h1>
+            <h4>Frontend Developer</h4>
+          </div>
+        </a>
       </div>
     </header>
