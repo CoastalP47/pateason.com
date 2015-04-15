@@ -12,6 +12,10 @@
     left:3px;
     &.alt{
       display:none;
+      &.middle{
+        .transition(.3s all);
+        opacity:0;
+      }
     }
     &.top{
       .transform-origin(center center);
@@ -56,6 +60,9 @@
         display:block;
         &.top{
           .animation(menuIconTopReverse .3s forwards);
+        }
+        &.middle{
+          opacity:1;
         }
         &.bottom{
           .animation(menuIconBottomReverse .3s forwards);
@@ -104,6 +111,54 @@
   }
 }
 @keyframes menuIconBottomReverse{
+  0%{
+    .transform(translateY(-9px) rotate(-45deg));
+  }
+  50%{
+    .transform(translateY(-9px));
+  }
+  100%{
+    .transform(translateY(0px) rotate(0deg));
+  } 
+}
+
+
+@-webkit-keyframes menuIconTop{
+  0%{
+    .transform(translateY(0px) rotate(0deg));
+  }
+  50%{
+    .transform(translateY(9px));
+  }
+  100%{
+    .transform(translateY(9px) rotate(45deg));
+  }
+}
+@-webkit-keyframes menuIconBottom{
+  0%{
+    .transform(translateY(0px) rotate(0deg));
+  }
+  50%{
+    .transform(translateY(-9px));
+  }
+  100%{
+    .transform(translateY(-9px) rotate(-45deg));
+  } 
+}
+
+
+@-webkit-keyframes menuIconTopReverse{
+  0%{
+    .transform(translateY(9px) rotate(45deg));
+  }
+  50%{
+    .transform(translateY(9px));
+  }
+  100%{
+    .transform(translateY(0px) rotate(0deg));
+  }
+}
+@-webkit-keyframes menuIconBottomReverse{
   0%{
     .transform(translateY(-9px) rotate(-45deg));
   }
