@@ -2,6 +2,10 @@
   <i class="menu-bar top pos-absolute"></i>
   <i class="menu-bar middle pos-absolute"></i>
   <i class="menu-bar bottom pos-absolute"></i>
+
+  <i class="menu-bar top alt pos-absolute"></i>
+  <i class="menu-bar middle alt pos-absolute"></i>
+  <i class="menu-bar bottom alt pos-absolute"></i>
 </a>
 <div class="pos-fixed nav-cover">
   <div class="menu-wrap pos-fixed">

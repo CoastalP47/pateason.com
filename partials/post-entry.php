@@ -15,7 +15,7 @@
           <i class="fa fa-tags"></i>
           <?php $tags = get_the_tags();
           foreach($tags as $tag){
-            echo '<a href="'.get_tag_link($tag->ID).'" class="label">'.$tag->name.'</a>';
+            echo '<a href="'.get_tag_link($tag->term_id).'" class="label">'.$tag->name.'</a>';
           } ?>
         </div>
       <?php } ?>

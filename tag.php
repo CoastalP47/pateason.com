@@ -1,6 +1,9 @@
 <?php get_header();
   $i=0;
   if(have_posts()){ ?>
+    <div class="row archive-title">
+      <h2><i class="fa fa-tags"></i> <?php single_tag_title(); ?> </h2>
+    </div>
     <section id="posts">
       <div class="row posts">
         <?php

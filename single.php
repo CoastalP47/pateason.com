@@ -28,6 +28,10 @@
         <?php
           }
         } ?>
+        <div class="row pagination clearfix">
+          <div class="nav-previous small-centered left button small"><?php previous_post_link( '%link', '<i class="fa fa-angle-left"></i> %title' ); ?></div>
+          <div class="nav-next small-centered right button small"><?php next_post_link( '%link', '%title <i class="fa fa-angle-right"></i>' ); ?></div>
+        </div>
         <div class="post-comments">
           <?php comments_template(); ?>
         </div>

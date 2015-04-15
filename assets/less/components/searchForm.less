@@ -1,11 +1,38 @@
 form.search-form{
 	color:#fff;
+	i{
+		right:10px;
+		top:10px;
+	}
 	input{
 		background:none;
 		border:none;
+		border-bottom:1px solid #fff;
 		color:#fff;
+		box-shadow:none;
+		padding:0.5rem 2rem 0.5rem 0.5rem;
 		&:focus{
 			background:none;
 		}
 	}	
+}
+#searchResults{
+	.search_result{
+		padding:0 0 10px;
+		a{
+			color:#fff !important;
+			.transition(.3s all);
+			h5{
+				color:#fff;
+				margin:0;
+				line-height:1.5em;
+			}
+			span{
+				font-size:.8em;
+			}
+			&:hover{
+				opacity:0.5;
+			}
+		}
+	}
 }
