@@ -1,0 +1,30 @@
+#stickyHeader{
+  position:fixed;
+  background:#fff;
+  width:100%;
+  border-bottom:2px solid @headingColor;
+  z-index:10;
+  padding:10px 0;
+  .transition(150ms all);
+  .transform(translateY(-100%));
+  img{
+    border-radius:50px;
+    border:2px solid @headingColor;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  h4{
+    display:inline-block;
+    vertical-align:middle;
+    margin:0 0 0 10px;
+    span{
+      font-family:@primaryFont;
+      font-weight:100;
+    }
+  }
+
+
+  &.active{
+      .transform(translateY(0%));
+  }
+}

@@ -1,0 +1,58 @@
+//colors
+@primaryColor: #1c63a2;
+@secondaryColor:#3daadf;
+@secondaryColorFade:#c6e0f4;
+@headingColor:#233240;
+@bodyColor: #7F8C8D;
+
+
+//fonts
+@primaryFont:'Open Sans', sans-serif;
+@secondaryFont:'Oswald', sans-serif;
+
+
+//media queries
+.breakMobile-max(@rules){
+  @media only screen and (max-width: 40em){
+    @rules();
+  }
+}
+
+.breakSmall-min(@rules){
+  @media only screen and (min-width: 40.063em){
+    @rules();
+  }
+}
+.breakSmall-only(@rules){
+  @media only screen and (min-width: 40.063em) and (max-width: 64em){
+    @rules();
+  }
+}
+
+.breakMedium-min(@rules){
+  @media only screen and (min-width: 64.063em){
+    @rules();
+  }
+}
+.breakMedium-only(@rules){
+  @media only screen and (min-width: 64.063em) and (max-width: 90em){
+    @rules();
+  }
+}
+
+.breakLarge-min(@rules){
+  @media only screen and (min-width: 90.063em){
+    @rules();
+  }
+}
+.breakLarge-only(@rules){
+  @media only screen and (min-width: 90.063em) and (max-width: 120em){
+    @rules();
+  }
+}
+
+.breakXLarge-min(@rules){
+  @media only screen and (min-width: 120.063em){
+    @rules();
+  }
+}

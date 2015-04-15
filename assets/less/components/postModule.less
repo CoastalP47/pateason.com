@@ -1,0 +1,165 @@
+.post-entry{
+  padding:10px;
+  opacity:0;
+  .animation(postFadeIn .65s 1.5s forwards);
+  &.post-one{
+    .animation(postFadeInIntro .25s 1s forwards);
+  }
+  &.post-two{
+    .animation(postFadeInIntro .25s 1.2s forwards);
+  }
+  &.post-three{
+    .animation(postFadeInIntro .25s 1.4s forwards);
+  }
+
+  @media screen and (max-width:621px){
+    opacity:1 !important;
+    .transform(translateY(0px)) !important;
+    position:relative !important;
+    float:left !important;
+    width:100% !important;
+    top:auto !important;
+    left:auto !important;
+  }
+
+  .post-gutter{
+    padding:20px;
+    background:#fff;
+    border-radius:4px;
+    border:1px solid #efefef;
+  }
+  .post-title{
+
+  }
+  .post-excerpt{
+    font-size:.9em;
+  }
+  .post-date{
+    i{
+
+    }
+    small{
+      font-size: .75rem;
+      border: 1px solid #FFF;
+    }
+  }
+  .post-meta{
+    a.label{
+      border:1px solid #fff;
+      .transition(150ms all);
+      &:hover{
+        color:@primaryColor;
+        border:1px solid @primaryColor;
+        background:#fff;
+      }
+    }
+    .post-tags{
+
+    }
+    .post-category{
+
+    }
+    .post-comments{
+      small{
+        font-size:0.6875rem;
+        border:1px solid #fff;
+      }
+    }
+  }
+}
+
+.post-title{
+
+}
+.post-excerpt{
+  font-size:.9em;
+}
+.post-date{
+  i{
+
+  }
+  small{
+    font-size: .75rem;
+    border: 1px solid #FFF;
+  }
+}
+.post-meta{
+  a.label{
+    border:1px solid #fff;
+    .transition(150ms all);
+    &:hover{
+      color:@primaryColor;
+      border:1px solid @primaryColor;
+      background:#fff;
+    }
+  }
+  .post-tags{
+
+  }
+  .post-category{
+
+  }
+  .post-comments{
+    small{
+      font-size:0.6875rem;
+      border:1px solid #fff;
+    }
+  }
+}
+
+@keyframes postFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes postFadeInIntro{
+  0%{
+    opacity:0;
+    .transform(translateY(30px));
+  }
+  45%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+  55%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+  100%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+}
+
+@-webkit-keyframes postFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes postFadeInIntro{
+  0%{
+    opacity:0;
+    .transform(translateY(30px));
+  }
+  45%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+  55%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+  100%{
+    opacity:1;
+    .transform(translateY(0px));
+  }
+
+}
