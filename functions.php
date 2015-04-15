@@ -1,4 +1,7 @@
 <?php
+//theme support
+add_theme_support( 'post-thumbnails' ); 
+
 //enqueue scripts
 function pateason_scripts(){
 	wp_enqueue_style( 'pateason-style', get_template_directory_uri().'/assets/stylesheets/pateason.css' );

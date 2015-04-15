@@ -11025,6 +11025,7 @@ body.home header .row {
 }
 .post-entry {
   padding: 10px;
+  margin: 0 0 20px;
   opacity: 0;
   -webkit-animation: postFadeIn 0.65s 1.5s forwards;
   -moz-animation: postFadeIn 0.65s 1.5s forwards;
@@ -11064,6 +11065,9 @@ body.home header .row {
   background: #fff;
   border-radius: 4px;
   border: 1px solid #efefef;
+}
+.post-entry .post-gutter > img {
+  margin: 0 0 10px;
 }
 .post-entry .post-excerpt {
   font-size: .9em;
