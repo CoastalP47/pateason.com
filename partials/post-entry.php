@@ -1,5 +1,10 @@
 <article class="column small-12 medium-6 large-4 post-entry <?php echo $class; ?>">
   <div class="post-gutter">
+    <?php
+      if(has_post_thumbnail()){
+        the_post_thumbnail('medium');
+      } 
+    ?>
     <h4 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
     <div class="post-date">
       <i class="fa fa-calendar-o"></i>
