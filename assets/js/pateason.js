@@ -69,8 +69,10 @@ Search = {
 		var helper = this;
 		$('.nav-cover input.search-field').focus(function(e){
 			$('.nav-cover').addClass('search');
+			$('body').addClass('searching');
 		}).blur(function(e){
 			$('.nav-cover').removeClass('search');
+			$('body').removeClass('searching');
 		});
 		$('.nav-cover form.search-form').submit(function(e){
 			e.preventDefault();
