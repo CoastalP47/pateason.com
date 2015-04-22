@@ -11077,9 +11077,9 @@ body.home header {
   padding: 150px 0;
 }
 body.home header .row {
-  -webkit-animation: headerFadeIn 1s;
-  -moz-animation: headerFadeIn 1s;
-  -ms-animation: headerFadeIn 1s;
+  -webkit-animation: headerFadeIn 0.5s;
+  -moz-animation: headerFadeIn 0.5s;
+  -ms-animation: headerFadeIn 0.5s;
 }
 @-webkit-keyframes headerFadeIn {
   0% {
@@ -11117,24 +11117,24 @@ body.home header .row {
   padding: 10px;
   margin: 0 0 20px;
   opacity: 0;
-  -webkit-animation: postFadeIn 0.65s 1.5s forwards;
-  -moz-animation: postFadeIn 0.65s 1.5s forwards;
-  -ms-animation: postFadeIn 0.65s 1.5s forwards;
+  -webkit-animation: postFadeIn 0.3s 0.25s forwards;
+  -moz-animation: postFadeIn 0.3s 0.25s forwards;
+  -ms-animation: postFadeIn 0.3s 0.25s forwards;
 }
 .post-entry.post-one {
-  -webkit-animation: postFadeInIntro 0.25s 1s forwards;
-  -moz-animation: postFadeInIntro 0.25s 1s forwards;
-  -ms-animation: postFadeInIntro 0.25s 1s forwards;
+  -webkit-animation: postFadeInIntro 0.25s forwards;
+  -moz-animation: postFadeInIntro 0.25s forwards;
+  -ms-animation: postFadeInIntro 0.25s forwards;
 }
 .post-entry.post-two {
-  -webkit-animation: postFadeInIntro 0.25s 1.2s forwards;
-  -moz-animation: postFadeInIntro 0.25s 1.2s forwards;
-  -ms-animation: postFadeInIntro 0.25s 1.2s forwards;
+  -webkit-animation: postFadeInIntro 0.25s 0.15s forwards;
+  -moz-animation: postFadeInIntro 0.25s 0.15s forwards;
+  -ms-animation: postFadeInIntro 0.25s 0.15s forwards;
 }
 .post-entry.post-three {
-  -webkit-animation: postFadeInIntro 0.25s 1.4s forwards;
-  -moz-animation: postFadeInIntro 0.25s 1.4s forwards;
-  -ms-animation: postFadeInIntro 0.25s 1.4s forwards;
+  -webkit-animation: postFadeInIntro 0.25s 0.2s forwards;
+  -moz-animation: postFadeInIntro 0.25s 0.2s forwards;
+  -ms-animation: postFadeInIntro 0.25s 0.2s forwards;
 }
 @media screen and (max-width: 621px) {
   .post-entry {
@@ -11291,6 +11291,19 @@ footer ul.inline-list li a {
   -ms-transition: 150ms all;
   -o-transition: 150ms all;
   font-size: 1.25em;
+}
+@media only screen and (max-width: 40em) {
+  footer ul.inline-list li a {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 40.1em) and (max-width: 90em) {
+  footer ul.inline-list li a {
+    font-size: 1.5em;
+  }
+}
+footer .digitalocean {
+  padding: 0 0 20px;
 }
 footer .footer-accent {
   border-top: 5px solid #233240;
