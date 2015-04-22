@@ -13,7 +13,7 @@
     &.alt{
       display:none;
       &.middle{
-        .transition(.3s all);
+        //.transition(.2s all);
         opacity:0;
       }
     }
@@ -42,13 +42,13 @@
         display:none;
       }
       &.top{
-        .animation(menuIconTop .3s forwards);
+        .animation(menuIconTop .2s forwards);
       }
       &.middle{
-        opacity:0;
+        .animation(menuIconMiddle .2s forwards);
       }
       &.bottom{
-        .animation(menuIconBottom .3s forwards);
+        .animation(menuIconBottom .2s forwards);
       }
     }
   }
@@ -59,13 +59,13 @@
       &.alt{
         display:block;
         &.top{
-          .animation(menuIconTopReverse .3s forwards);
+          .animation(menuIconTopReverse .2s forwards);
         }
         &.middle{
-          opacity:1;
+          .animation(menuIconMiddleReverse .2s forwards);
         }
         &.bottom{
-          .animation(menuIconBottomReverse .3s forwards);
+          .animation(menuIconBottomReverse .2s forwards);
         }
       }
     }
@@ -85,6 +85,20 @@
   100%{
     .transform(translateY(9px) rotate(45deg));
   }
+}
+@keyframes menuIconMiddle{
+  0%{
+    opacity:1;
+  }
+  50%{
+    opacity:1;
+  }
+  51%{
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+  } 
 }
 @keyframes menuIconBottom{
   0%{
@@ -109,6 +123,20 @@
   100%{
     .transform(translateY(0px) rotate(0deg));
   }
+}
+@keyframes menuIconMiddleReverse{
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity:0;
+  }
+  51%{
+    opacity:1;
+  }
+  100%{
+    opacity:1;
+  } 
 }
 @keyframes menuIconBottomReverse{
   0%{
@@ -200,7 +228,7 @@
     overflow:hidden;
     margin:0;
     display:block;
-    .transition(.3s all);
+    .transition(.2s all);
     li{
       display:block;
       a{
@@ -210,7 +238,7 @@
         font-size:2rem;
         font-weight:100;
         text-transform:uppercase;
-        .transition(0.3s all);
+        .transition(0.2s all);
         &:hover,
         &.active{
           opacity:0.5;
