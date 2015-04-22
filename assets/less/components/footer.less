@@ -6,8 +6,17 @@ footer{
       a{
         .transition(150ms all);
         font-size:1.25em;
+        @media only screen and (max-width: 40em){
+          font-size:2em;
+        }
+        @media only screen and (min-width: 40.1em) and (max-width: 90em){
+          font-size:1.5em;
+        }
       }
     }
+  }
+  .digitalocean{
+    padding:0 0 20px;
   }
   .footer-accent{
     border-top:5px solid @headingColor;
