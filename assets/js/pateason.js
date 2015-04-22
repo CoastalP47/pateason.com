@@ -67,15 +67,29 @@ Search = {
 	},
 	events: function(){
 		var helper = this;
+		var timer = null;
 		$('.nav-cover input.search-field').focus(function(e){
 			$('.nav-cover').addClass('search');
+			$('body').addClass('searching');
 		}).blur(function(e){
 			$('.nav-cover').removeClass('search');
+			$('body').removeClass('searching');
 		});
+		
 		$('.nav-cover form.search-form').submit(function(e){
 			e.preventDefault();
 			helper.processAJAX($('.nav-cover input.search-field').val());
 		});
+
+		$("form.search-form input.search-field").keyup(function() {
+		  if(timer){
+		    clearTimeout(timer);
+		  }
+		  timer = setTimeout(function(){
+		  	helper.processAJAX($('.nav-cover input.search-field').val());
+		  }, 250);
+		});
+
 	},
 	processAJAX: function(data){
 		if(data && data != ''){
